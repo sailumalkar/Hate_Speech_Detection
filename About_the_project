@@ -1,0 +1,59 @@
+Hate Speech Detection – EDA and Text Classification 
+Project Overview
+This project aims to detect hate speech in tweets using Natural Language Processing (NLP) techniques and machine learning models. It includes exploratory data analysis (EDA), data preprocessing, text vectorization, model building, and evaluation.
+
+1. Objective
+To classify tweets into one of the following categories:
+Hate Speech
+Offensive Language
+Neither
+This supports moderation and content filtering in social media platforms.
+
+2. Libraries Used
+pandas, numpy – for data manipulation
+matplotlib, seaborn – for visualization
+sklearn – for machine learning modeling and evaluation
+nltk, re – for natural language preprocessing
+CountVectorizer, TfidfVectorizer – for text feature extraction
+
+3. Exploratory Data Analysis (EDA)
+Loaded the dataset labeled_data.csv with 24,783 tweets
+Verified column distribution: count, hate_speech, offensive_language, neither, class, tweet
+Found the majority of tweets fall under “offensive language” followed by “neither”
+Word cloud visualizations and bar charts were used to examine commonly used terms in each category
+
+4. Data Cleaning and Preprocessing
+Converted text to lowercase
+Removed URLs, mentions, punctuation, and special characters
+Tokenized and removed stop words using nltk
+Applied stemming/lemmatization
+
+5. Feature Extraction
+Applied TF-IDF Vectorization to convert tweets into numerical feature vectors
+Resulting feature matrix was used to train ML models
+
+6. Model Building and Evaluation
+Models used:
+Logistic Regression
+Naive Bayes
+Support Vector Machine (SVM)
+Model performance evaluated using:
+Accuracy
+Precision, Recall, F1-Score
+Confusion Matrix
+
+The models were trained to predict the class column:
+0: Hate Speech
+1: Offensive Language
+2: Neither
+
+7. Model Results Summary
+Model	Accuracy (Approx.)
+Logistic Regression	~85%
+Naive Bayes	~83%
+SVM	~86%
+
+8. Key Insights
+Tweets labeled as “offensive” dominate the dataset — class imbalance was considered
+SVM gave slightly better performance on unseen test data
+TF-IDF gave better results than simple Count Vectorizer
